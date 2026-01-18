@@ -4,6 +4,7 @@
   max-width: calc(var(--container-width) + var(--container-padding-x) * 2);
   padding-inline: var(--container-padding-x);
   margin-inline: auto;
+  border: 1px solid red;
 }
 
 .visually-hidden {
@@ -21,4 +22,10 @@
 
 .section {
   padding-block: 40px;
+}
+
+.bg-image {
+  position: absolute;
+  user-select: none;
+  pointer-events: none;
 }

@@ -1,0 +1,48 @@
+@use "../helpers" as *;
+
+.advantages {
+  position: relative;
+  min-height: 638px;
+
+  &__bg-image {
+    top: 40px;
+    right: 0;
+    transform: translateX(
+        clamp(0px, calc((1920px - 100vw) * 0.5), 700px)
+    );
+
+    max-width: none;
+    height: auto;
+    flex-shrink: 0;
+
+    @include mobile {
+      display: none;
+    }
+  }
+
+  &__inner {
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 32px;
+
+    @include laptop {
+      max-width: 50%;
+    }
+
+    @include mobile {
+      max-width: 100%;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 24px;
+  }
+
+  &__item {
+    @include flex-center-y;
+    column-gap: 8px;
+  }
+}

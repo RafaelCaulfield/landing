@@ -1,0 +1,51 @@
+@use "../../helpers/index" as *;
+
+.how-its-work {
+  display: flex;
+  flex-direction: column;
+  row-gap: 32px;
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 32px;
+    align-items: center;
+  }
+
+  &__item {
+    width: 1300px;
+    border-radius: 16px;
+    box-shadow: -1px 1px 2px 0 rgba(89, 89, 89, 0.05), -2px 3px 4px 0 rgba(89, 89, 89, 0.04), -5px 7px 5px 0 rgba(89, 89, 89, 0.03), -9px 13px 6px 0 rgba(89, 89, 89, 0.01), -14px 20px 7px 0 rgba(89, 89, 89, 0);
+    background: var(--color-white);
+    padding: 32px 24px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+
+    @include desktop {
+      width: 1030px;
+    }
+
+    @include laptop {
+      width: 900px;
+    }
+
+    @include tablet {
+      width: 740px;
+    }
+
+    @include mobile {
+      width: 100%;
+    }
+  }
+
+  &__item-info {
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+  }
+}
+
+.how-its-work-gradient-container {
+  background: linear-gradient(180deg, #fff 0%, #f4f4f4 54.26%, #fff 100%);
+}

@@ -216,7 +216,6 @@ svg * {
   max-width: calc(var(--container-width) + var(--container-padding-x) * 2);
   padding-inline: var(--container-padding-x);
   margin-inline: auto;
-  border: 1px solid red;
 }
 
 .visually-hidden {
@@ -254,6 +253,14 @@ html {
 
 h2, .h2 {
   font-size: 32px;
+}
+
+h3, .h3 {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 110%;
+  letter-spacing: -0.01em;
+  margin: 0;
 }
 
 h1, h2, h3, h4 {
@@ -385,16 +392,6 @@ h1, h2, h3, h4 {
   background-color: var(--color-accent-green-20);
 }
 
-.about {
-  display: flex;
-  flex-direction: column;
-  row-gap: 32px;
-}
-
-.about-gradient-container {
-  background: linear-gradient(180deg, #fff 0%, #f4f4f4 54.26%, #fff 100%);
-}
-
 .block-title {
   display: flex;
   flex-direction: column;
@@ -515,6 +512,16 @@ h1, h2, h3, h4 {
   justify-content: center;
 }
 
+.about {
+  display: flex;
+  flex-direction: column;
+  row-gap: 32px;
+}
+
+.about-gradient-container {
+  background: linear-gradient(180deg, #fff 0%, #f4f4f4 54.26%, #fff 100%);
+}
+
 .features__list {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -547,6 +554,11 @@ h1, h2, h3, h4 {
 .advantages {
   position: relative;
   min-height: 638px;
+}
+@media (width <= 767px) {
+  .advantages {
+    min-height: auto;
+  }
 }
 .advantages__bg-image {
   top: 40px;
@@ -586,6 +598,57 @@ h1, h2, h3, h4 {
   display: flex;
   align-items: center;
   column-gap: 8px;
+}
+
+.how-its-work {
+  display: flex;
+  flex-direction: column;
+  row-gap: 32px;
+}
+.how-its-work__list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 32px;
+  align-items: center;
+}
+.how-its-work__item {
+  width: 1300px;
+  border-radius: 16px;
+  box-shadow: -1px 1px 2px 0 rgba(89, 89, 89, 0.05), -2px 3px 4px 0 rgba(89, 89, 89, 0.04), -5px 7px 5px 0 rgba(89, 89, 89, 0.03), -9px 13px 6px 0 rgba(89, 89, 89, 0.01), -14px 20px 7px 0 rgba(89, 89, 89, 0);
+  background: var(--color-white);
+  padding: 32px 24px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 8px;
+}
+@media (width <= 1920px) {
+  .how-its-work__item {
+    width: 1030px;
+  }
+}
+@media (width <= 1440px) {
+  .how-its-work__item {
+    width: 900px;
+  }
+}
+@media (width <= 1178px) {
+  .how-its-work__item {
+    width: 740px;
+  }
+}
+@media (width <= 767px) {
+  .how-its-work__item {
+    width: 100%;
+  }
+}
+.how-its-work__item-info {
+  display: flex;
+  flex-direction: column;
+  row-gap: 8px;
+}
+
+.how-its-work-gradient-container {
+  background: linear-gradient(180deg, #fff 0%, #f4f4f4 54.26%, #fff 100%);
 }
 
 /*# sourceMappingURL=styles.css.map */

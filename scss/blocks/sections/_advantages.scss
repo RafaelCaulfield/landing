@@ -1,8 +1,12 @@
-@use "../helpers" as *;
+@use "../../helpers/index" as *;
 
 .advantages {
   position: relative;
   min-height: 638px;
+
+  @include mobile {
+    min-height: auto;
+  }
 
   &__bg-image {
     top: 40px;

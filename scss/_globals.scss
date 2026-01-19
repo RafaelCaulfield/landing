@@ -44,3 +44,7 @@ h1, h2, h3, h4 {
 .main > :is(.container, .gradient-container):not(:last-child) {
   margin-bottom: var(--container-margin-y);
 }
+
+#about, #how-it-works, #contacts {
+  scroll-margin-top: 100px;
+}

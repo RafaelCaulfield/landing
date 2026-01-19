@@ -373,6 +373,10 @@ h1, h2, h3, h4 {
   margin-bottom: var(--container-margin-y);
 }
 
+#about, #how-it-works, #contacts {
+  scroll-margin-top: 100px;
+}
+
 .header {
   position: sticky;
   top: 0;

@@ -1,0 +1,26 @@
+@use "../helpers" as *;
+
+.burger {
+  @include square(52px);
+  @include reset-button;
+  @include flex-center;
+  border-radius: var(--border-radius-header);
+  position: relative;
+  z-index: 10;
+  background-color: var(--color-white);
+
+  &__line {
+    display: block;
+    width: 60%;
+    height: 2px;
+    background-color: #999999;
+    box-shadow: 0 -7px 0 #999999, 0 7px #999999;
+    @include transition;
+  }
+
+  &--close {
+    background-color: var(--color-white);
+
+    @include hover {}
+  }
+}

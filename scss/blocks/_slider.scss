@@ -5,6 +5,14 @@
   border: 1px solid #c1c7cd;
   border-radius: 20px;
   height: 872px;
+
+  @include tablet {
+    height: 680px;
+  }
+
+  @include mobile {
+    height: 486px;
+  }
 }
 
 .slider-header {

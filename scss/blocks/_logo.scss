@@ -2,4 +2,14 @@
 
 .logo {
   flex-shrink: 0;
+
+  img {
+    @include tablet {
+      width: 121px;
+    }
+  }
+
+  @include tablet {
+    flex-shrink: 1;
+  }
 }

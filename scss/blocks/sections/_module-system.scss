@@ -7,6 +7,10 @@
 
   $cards-gap: 24px;
 
+  @include tablet {
+    $cards-gap: 16px;
+  }
+
   &__inner {
     display: flex;
     flex-direction: column;
@@ -15,7 +19,15 @@
 
   &__inner-row {
     display: flex;
-    column-gap: $cards-gap;
+    gap: $cards-gap;
+
+    @include tablet {
+      flex-wrap: wrap;
+    }
+
+    @include mobile {
+      flex-direction: column;
+    }
   }
 
   &__card {
@@ -26,6 +38,12 @@
     background: var(--color-white);
     flex-grow: 1;
     overflow: hidden;
+    min-height: 376px;
+    max-height: 376px;
+
+    @include mobile {
+      min-height: auto;
+    }
 
     @include transition;
     @include hover {
@@ -33,77 +51,86 @@
     }
 
     &--prod {
-      flex-grow: 1208;
+      flex: 5.5;
 
       .module-system__card-overlay {
-        background: #FF6B6B; // Красный
+        background-color: var(--color-accent-blue-15);
       }
     }
 
     &--mon {
-      flex-grow: 988;
+      flex: 4.5;
 
       .module-system__card-overlay {
-        background: #4ECDC4; // Бирюзовый
+        background: var(--color-main-gray-cards);
       }
     }
 
     &--ai {
-      flex-grow: 480;
+      flex: 2.1;
 
       .module-system__card-overlay {
-        background: #95E1D3; // Мятный
+        background: var(--color-gray-blue-actions);
+      }
+
+      @include desktop {
       }
     }
 
     &--lab {
-      flex-grow: 977;
+      flex: 4.6;
 
       .module-system__card-overlay {
-        background: #F38181; // Розовый
+        background: var(--color-accent-green);
       }
     }
 
     &--agvisio {
-      flex-grow: 715;
+      flex: 3.3;
 
       .module-system__card-overlay {
-        background: #AA96DA; // Фиолетовый
+        background: var(--color-accent-green-20);
       }
+    }
+
+    &--ai, &--lab, &--agvisio, &--prod, &--mon {
+      @include laptop {
+        flex: 1;
+      }
+
+      @include tablet {
+        flex: 0 1 auto;
+        width: 100%;
+      }
+    }
+  }
+
+  &__card-image {
+    flex-shrink: 0;
+
+    @include mobile-s {
+      width: 160px;
+      flex-shrink: 1;
     }
   }
 
   &__card-content {
     position: relative;
     z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
   }
 
   &__card-link {
     position: absolute;
     inset: 0;
-    z-index: 11; // Поверх overlay и контента
-    border-radius: inherit; // Наследует border-radius карточки
-
-    // Убираем outline при фокусе, добавляем свой
-    &:focus-visible {
-      outline: 2px solid var(--color-accent-green);
-      outline-offset: 2px;
-    }
+    z-index: 11;
+    border-radius: inherit;
   }
 
   &__card-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 10;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 24px;
-    opacity: 0;
-    @include transition;
 
     .module-system__card:hover & {
       opacity: 1;

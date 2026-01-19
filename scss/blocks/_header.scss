@@ -10,11 +10,22 @@
   animation-name: scrolling-header;
   animation-fill-mode: both;
   animation-timeline: scroll();
-  animation-range: 0% 15%;
+  animation-range: 0% 10%;
+
+  @include laptop {
+    padding-block: 24px 12px;
+  }
+
+  @include tablet {
+    padding-block: 6px;
+  }
 
   @keyframes scrolling-header {
     to {
-      background-color: var(--color-black-40);
+      background-color: var(--color-white);
+      -webkit-box-shadow: 0px 11px 20px 0px rgba(178, 178, 178, 0.5);
+      -moz-box-shadow: 0px 11px 20px 0px rgba(178, 178, 178, 0.5);
+      box-shadow: 0px 11px 20px 0px rgba(178, 178, 178, 0.5);
     }
   }
 

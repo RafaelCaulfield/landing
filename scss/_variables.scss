@@ -18,9 +18,21 @@
   --color-accent-green-20: #FAFEEE;
   --color-accent-green-bright: #D9F783;
 
-  --color-main-grey-cards: #E4E4E4;
+  --color-main-gray-cards: #E4E4E4;
 
   --container-width: 2220px;
   --container-padding-x: 40px;
   --container-margin-y: 40px;
+
+  @include desktop {
+    --container-width: 1360px;
+  }
+
+  @include mobile {
+    --container-padding-x: 24px;
+  }
+
+  @include mobile-s {
+    --container-margin-y: 32px;
+  }
 }

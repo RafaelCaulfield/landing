@@ -38,7 +38,7 @@
     </a>
 
 
-    <nav class="navigation header__navigation">
+    <nav class="navigation header__navigation hidden-tablet">
       <ul class="navigation__list">
         <li class="navigation__item">
           <a
@@ -63,6 +63,15 @@
         </li>
       </ul>
     </nav>
+
+    <button
+      class="burger visible-tablet"
+      id="burger"
+      type="button"
+    >
+      <span class="burger__line"></span>
+    </button>
+
   </div>
 </header>
 
@@ -457,8 +466,13 @@
     <h2 class="module-system__title">Модульная система</h2>
     <div class="module-system__inner">
       <div class="module-system__inner-row">
+        <!--Производственный модуль-->
         <div class="module-system__card module-system__card--prod">
-          <a href="#" class="module-system__card-link" aria-label="Подробнее о производственном модуле">
+          <a
+            href="#"
+            class="module-system__card-link"
+            aria-label="Подробнее о производственном модуле"
+          >
             <span class="visually-hidden">Производственный модуль</span>
           </a>
           <div class="module-system__card-content">
@@ -472,15 +486,47 @@
                 loading="lazy"
               />
             </div>
-            <p>Изображение</p>
+            <img
+              class="module-system__card-image"
+              src="images/friends.png"
+              alt=""
+              width="244"
+              height="244"
+              loading="lazy"
+            />
             <p class="module-system__card-description">Оперативное отслеживание производственных рисков.</p>
           </div>
-          <div class="module-system__card-overlay">
-            <p class="module-system__card-overlay-text">Подробнее о модуле</p>
+          <div class="module-system__card-overlay card-overlay">
+            <h4 class="card-overlay__title">Производственный модуль</h4>
+            <div class="card-overlay__info">
+              <ul class="card-overlay__info-list">
+                <li class="card-overlay__info-item">
+                  Фиксация ключевых производственных и ветеринарных показателей
+                </li>
+                <li class="card-overlay__info-item">
+                  BI-дашборды с аналитикой по ключевым производственным и ветеринарным показателям в динамике в реальном времени
+                </li>
+                <li class="card-overlay__info-item">
+                  Отображение целостной картины ситуации на предприятии с учётом всех поступивших данных
+                </li>
+                <li class="card-overlay__info-item">
+                  Система оперативного информирования о ситуациях, потенциально приводящих к возникновению производственных и ветеринарных рисков
+                </li>
+                <li class="card-overlay__info-item">
+                  Прогнозы и рекомендации от нейросети на основе профессиональной базы знаний и решений ГК ВИК
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
+
+        <!--Модуль мониторинга-->
         <div class="module-system__card module-system__card--mon">
-          <a href="#" class="module-system__card-link" aria-label="Подробнее о модуле мониторинга">
+          <a
+            href="#"
+            class="module-system__card-link"
+            aria-label="Подробнее о модуле мониторинга"
+          >
             <span class="visually-hidden">Модуль мониторинга</span>
           </a>
           <div class="module-system__card-content">
@@ -494,17 +540,45 @@
                 loading="lazy"
               />
             </div>
-            <p>Изображение</p>
+            <img
+              class="module-system__card-image"
+              src="images/document.png"
+              alt=""
+              width="230"
+              height="230"
+              loading="lazy"
+            />
             <p class="module-system__card-description">Фиксация ключевых производственных процессов в рамках проверок.</p>
           </div>
-          <div class="module-system__card-overlay">
-            <p class="module-system__card-overlay-text">Подробнее о модуле</p>
+          <div class="module-system__card-overlay card-overlay">
+            <h4 class="card-overlay__title">Модуль мониторинга</h4>
+            <div class="card-overlay__info">
+              <ul class="card-overlay__info-list">
+                <li class="card-overlay__info-item">
+                  Фиксация ключевых производственных показателей в рамках плановых проверок
+                </li>
+                <li class="card-overlay__info-item">
+                  Автоматизация обработки данных
+                </li>
+                <li class="card-overlay__info-item">
+                  Отслеживание динамики
+                </li>
+                <li class="card-overlay__info-item">
+                  Выявление факторов риска
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
       <div class="module-system__inner-row">
+        <!--ИИ-ассистент-->
         <div class="module-system__card module-system__card--ai">
-          <a href="#" class="module-system__card-link" aria-label="Подробнее об ИИ-ассистенте">
+          <a
+            href="#"
+            class="module-system__card-link"
+            aria-label="Подробнее об ИИ-ассистенте"
+          >
             <span class="visually-hidden">ИИ-ассистент</span>
           </a>
           <div class="module-system__card-content">
@@ -518,15 +592,31 @@
                 loading="lazy"
               />
             </div>
-            <p>Изображение</p>
+            <img
+              class="module-system__card-image"
+              src="images/message.png"
+              alt=""
+              width="244"
+              height="244"
+              loading="lazy"
+            />
             <p class="module-system__card-description">Задай вопрос ветеринару.</p>
           </div>
-          <div class="module-system__card-overlay">
-            <p class="module-system__card-overlay-text">Подробнее о модуле</p>
+          <div class="module-system__card-overlay card-overlay">
+            <h4 class="card-overlay__title">ИИ-ассистент</h4>
+            <div class="card-overlay__info">
+              <p>Круглосуточные консультации специалистов — ответы на вопросы, расследование практических кейсов, аргументированные рекомендации</p>
+            </div>
           </div>
         </div>
+
+        <!--Лабораторный модуль-->
         <div class="module-system__card module-system__card--lab">
-          <a href="#" class="module-system__card-link" aria-label="Подробнее о лабораторном модуле">
+          <a
+            href="#"
+            class="module-system__card-link"
+            aria-label="Подробнее о лабораторном модуле"
+          >
             <span class="visually-hidden">Лабораторный модуль</span>
           </a>
           <div class="module-system__card-content">
@@ -540,15 +630,44 @@
                 loading="lazy"
               />
             </div>
-            <p>Изображение</p>
+            <img
+              class="module-system__card-image"
+              src="images/lab.png"
+              alt=""
+              width="244"
+              height="244"
+              loading="lazy"
+            />
             <p class="module-system__card-description">Автоматизация работы лаборатории и структурирование информации.</p>
           </div>
-          <div class="module-system__card-overlay">
-            <p class="module-system__card-overlay-text">Подробнее о модуле</p>
+          <div class="module-system__card-overlay card-overlay">
+            <h4 class="card-overlay__title">Лабораторный модуль</h4>
+            <div class="card-overlay__info">
+              <ul class="card-overlay__info-list">
+                <li class="card-overlay__info-item">
+                  Автоматизация работы лаборатории
+                </li>
+                <li class="card-overlay__info-item">
+                  Оцифровка исследований
+                </li>
+                <li class="card-overlay__info-item">
+                  Интерпретация результатов анализов
+                </li>
+                <li class="card-overlay__info-item">
+                  Выявление заболеваний на ранней стадии
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
+
+        <!--AGVISIO-->
         <div class="module-system__card module-system__card--agvisio">
-          <a href="#" class="module-system__card-link" aria-label="Подробнее о AgVisio">
+          <a
+            href="#"
+            class="module-system__card-link"
+            aria-label="Подробнее о AgVisio"
+          >
             <span class="visually-hidden">AgVisio</span>
           </a>
           <div class="module-system__card-content">
@@ -562,11 +681,34 @@
                 loading="lazy"
               />
             </div>
-            <p>Изображение</p>
+            <img
+              class="module-system__card-image"
+              src="images/camera.png"
+              alt=""
+              width="244"
+              height="244"
+              loading="lazy"
+            />
             <p class="module-system__card-description">Цифровой контроль процедур и состояния животных через компьютерное зрение.</p>
           </div>
-          <div class="module-system__card-overlay">
-            <p class="module-system__card-overlay-text">Подробнее о модуле</p>
+          <div class="module-system__card-overlay card-overlay">
+            <h4 class="card-overlay__title">AgVisio</h4>
+            <div class="card-overlay__info">
+              <ul class="card-overlay__info-list">
+                <li class="card-overlay__info-item">
+                  Мониторинг привесов
+                </li>
+                <li class="card-overlay__info-item">
+                  Анализ поведение и тепловые карты
+                </li>
+                <li class="card-overlay__info-item">
+                  Выявление аномалий и падежа
+                </li>
+                <li class="card-overlay__info-item">
+                  Уведомление и отчёты в реальном времени
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>

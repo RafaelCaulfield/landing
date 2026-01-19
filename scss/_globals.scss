@@ -12,6 +12,10 @@ html {
 
 h2, .h2 {
   font-size: 32px;
+
+  @include mobile {
+    font-size: 24px !important;
+  }
 }
 
 h3, .h3 {
@@ -20,6 +24,14 @@ h3, .h3 {
   line-height: 110%;
   letter-spacing: -0.01em;
   margin: 0;
+}
+
+h4, .h4 {
+  font-size: 24px;
+
+  @include mobile {
+    font-size: 20px !important;
+  }
 }
 
 h1, h2, h3, h4 {

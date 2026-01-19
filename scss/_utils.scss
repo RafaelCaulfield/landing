@@ -60,6 +60,18 @@
   }
 }
 
+.hidden-tablet-s {
+  @include tablet-s {
+    display: none !important;
+  }
+}
+
+.hidden-mobile-s {
+  @include mobile-s {
+    display: none !important;
+  }
+}
+
 .visible-mobile {
   @include mobile-above {
     display: none !important;
@@ -68,6 +80,18 @@
 
 .visible-tablet {
   @include tablet-above {
+    display: none !important;
+  }
+}
+
+.visible-tablet-s {
+  @include tablet-s-above {
+    display: none !important;
+  }
+}
+
+.visible-mobile-s {
+  @include mobile-s-above {
     display: none !important;
   }
 }

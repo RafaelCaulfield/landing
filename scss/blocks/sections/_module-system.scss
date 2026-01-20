@@ -123,13 +123,6 @@
     height: 100%;
   }
 
-  &__card-link {
-    position: absolute;
-    inset: 0;
-    z-index: 11;
-    border-radius: inherit;
-  }
-
   &__card-overlay {
 
     .module-system__card:hover & {
